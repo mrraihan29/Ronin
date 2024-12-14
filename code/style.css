@@ -1,0 +1,681 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* START NAVBAR CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+@font-face {
+  src: url(font/la_oriental/LaOriental-Bold.otf);
+  font-family: oriental;
+}
+
+@font-face {
+  src: url(font/advantage.regular.ttf);
+  font-family: advantage;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  z-index: 2;
+  font-size: 25px;
+  margin-left: 30px;
+  margin-top: 25px;
+  position: absolute;
+}
+
+nav,
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+nav ul {
+  margin-left: 25px;
+}
+
+nav ul li a {
+  margin-left: 45px;
+  font-family: oriental;
+  text-decoration: none;
+  box-shadow: inset 0 0 0 0 black;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-decoration: none;
+  color: #000000;
+}
+
+nav ul li a:hover {
+  color: #370101;
+  text-decoration: underline;
+  transition: 0.45s;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 800px;
+}
+
+.kiri {
+  font-family: oriental;
+  z-index: 1;
+  width: 50%;
+}
+
+.kiri h1 {
+  /* z-index: 1; */
+  font-family: advantage;
+  position: absolute;
+  top: 240px;
+  margin-left: 100px;
+  font-size: 160px;
+}
+
+.kiri h2 {
+  /* z-index: 1; */
+  position: absolute;
+  top: 380px;
+  margin-left: 100px;
+  font-size: 61px;
+}
+
+.kiri a {
+  padding: 20px;
+  color: black;
+  position: absolute;
+  font-size: 50px;
+  background-color: #b72025;
+  top: 580px;
+  margin-left: 100px;
+  text-decoration: none;
+  cursor: pointer;
+  transform: skew(-21deg);
+}
+
+.kiri a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.kanan {
+  overflow: hidden;
+  height: 100%;
+}
+
+.lingkaran {
+  margin-left: 240px;
+  margin-top: -170px;
+  animation: rotateImg 60s linear infinite;
+}
+
+@keyframes rotateImg {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.ronin {
+  width: 1150px;
+  height: 1150px;
+  position: relative;
+  bottom: 1200px;
+  left: 15px;
+}
+
+/* END NAVBAR CSS */
+
+/* START BODY CSS */
+.game {
+  width: 100%;
+  height: 780px;
+  display: flex;
+  flex-direction: row;
+}
+.game-kanan {
+  width: 35%;
+  background-color: beige;
+  background-image: url(image/gamers\ grain.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -630px;
+  font-family: oriental;
+  font-size: 50px;
+  color: white;
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1.5s;
+  overflow: hidden;
+}
+
+.show {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.game-kiri {
+  width: 65%;
+  height: 780px;
+  background-color: white;
+}
+
+.dominator {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-family: oriental;
+  font-size: 70px;
+  margin-left: 80px;
+  margin-top: 50px;
+}
+
+.dominator img {
+  position: relative;
+  bottom: 20px;
+  right: 10px;
+}
+
+.game-list {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  height: 35.36rem;
+  overflow: hidden;
+}
+
+.game-list article {
+  display: flex;
+  flex: 1;
+  border: 4px solid #b72025;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  overflow: hidden;
+  transition: 0.5s;
+  transition-timing-function: ease;
+}
+
+.valorant,
+.pubg,
+.dota,
+.apex {
+  transition: 1s;
+  /* transition-timing-function: ease; */
+}
+
+.valorant:hover {
+  background: url(image/valogameplay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -110px;
+  flex: 20;
+  background-color: #0e1721;
+  transition: 1s;
+}
+
+.valorant:hover img {
+  display: none;
+}
+
+.pubg:hover {
+  background: url(image/pubggameplay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -200px;
+  flex: 20;
+  background-color: #0e1721;
+  transition: 1s;
+  /* transition-timing-function: ease; */
+}
+
+.pubg:hover img {
+  display: none;
+}
+
+.dota:hover {
+  background: url(image/dotagameplay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -100px;
+  flex: 20;
+  background-color: #0e1721;
+  transition: 1s;
+  /* transition-timing-function: ease; */
+}
+
+.dota:hover img {
+  display: none;
+}
+.apex:hover {
+  background: url(image/apexgameplay.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: -40px;
+  flex: 20;
+  background-color: #0e1721;
+  transition: 1s;
+  /* transition-timing-function: ease; */
+}
+
+.apex:hover img {
+  display: none;
+}
+
+.game-list article img {
+  width: 130px;
+  height: 130px;
+  justify-content: center;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 700px;
+  background: rgb(183, 32, 37);
+  background: linear-gradient(
+    180deg,
+    rgba(183, 32, 37, 1) 0%,
+    rgba(79, 0, 0, 1) 100%
+  );
+}
+
+.card {
+  font-family: monospace;
+  position: relative;
+  width: 320px;
+  height: 480px;
+  background: rgb(67, 9, 11);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 4px solid white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  width: 100%;
+  height: 100%;
+  background: white;
+  transform: skewY(345deg);
+  transition: 0.5s;
+}
+
+.card:hover::before {
+  top: -80%;
+  transform: skewY(380deg);
+}
+
+.card::after {
+  content: "RONIN";
+  margin-left: 0px;
+  position: absolute;
+  bottom: 0;
+  font-weight: 600;
+  font-size: 9em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.card .contentBox {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card .contentBox h3 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .price {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.card .contentBox .buy {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  color: #000000;
+  text-decoration: none;
+  background: #b72025;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+
+.card:hover .contentBox .buy {
+  top: 0;
+  opacity: 1;
+}
+
+.mouse {
+  height: 300px;
+  width: auto;
+}
+/* END BODY CSS */
+
+/* background: rgb(79,0,0);
+background: linear-gradient(90deg, rgba(79,0,0,1) 60%, rgba(26,1,1,1) 100%); */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -200px;
+}
+
+.footer-atas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 30px;
+  padding-left: 60px;
+  border-radius: 100px;
+  font-family: advantage;
+  width: 70%;
+  background: rgb(79, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(79, 0, 0, 1) 60%,
+    rgba(26, 1, 1, 1) 100%
+  );
+  color: white;
+  -webkit-box-shadow: 0px 0px 17px 4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 17px 4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 17px 4px rgba(0, 0, 0, 0.75);
+  position: relative;
+  top: 70px;
+}
+
+.footer-atas h1 {
+  font-size: 64px;
+}
+
+.footer-atas p {
+  font-size: 26px;
+}
+
+.footer-atas a {
+  color: rgb(79, 0, 0);
+  color: linear-gradient(90deg, rgba(79, 0, 0, 1) 60%, rgba(26, 1, 1, 1) 100%);
+  text-decoration: none;
+  margin-left: 140px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.footer-atas a h2 {
+  font-size: 51px;
+}
+
+.footer-bawah {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 600px;
+  background: rgb(79, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(79, 0, 0, 1) 60%,
+    rgba(26, 1, 1, 1) 100%
+  );
+  color: white;
+}
+
+.footer-bawah article {
+  margin-top: 50px;
+  /* background-color: aquamarine; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid white;
+  width: 90%;
+}
+
+.footer-bawah div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 90px;
+  font-family: advantage;
+  margin-bottom: -70px;
+}
+
+.footer-bawah article img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 335px;
+  height: 335px;
+}
+
+.footer-bawah article aside {
+  font-family: monospace;
+  text-align: justify;
+}
+
+.footer-bawah article aside h1 {
+  font-family: oriental;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 70px;
+}
+
+.footer-bawah article aside p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.Newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.Newsletter h1 {
+  color: white;
+  font-family: advantage;
+  font-size: 26px;
+  /* letter-spacing: 5px; */
+}
+
+.Newsletter input {
+  color: #fff;
+  width: 70%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 30px;
+  position: relative;
+  top: 30px;
+}
+
+.Newsletter input::placeholder {
+  letter-spacing: 2px;
+  color: lightgray;
+  font-size: 14px;
+  text-align: center;
+}
+
+.Newsletter button {
+  margin-top: 20px;
+  background-color: white;
+  font-family: advantage;
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 50px;
+}
+
+.footer-bawah figure img {
+  width: 50px;
+  height: 50px;
+  padding-left: 30px;
+  /* row-gap: 30px; */
+}
